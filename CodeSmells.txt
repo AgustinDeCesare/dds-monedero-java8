@@ -1,1 +1,2 @@
 1. Los tipos de movimiento tienen logicas distintas asi que deberian ser subclases separadas
+2. Agregate a le da responsabilidad de agregarse a la lista de la cuenta al movimiento cuando la cuenta deberia tener la responsabilidad

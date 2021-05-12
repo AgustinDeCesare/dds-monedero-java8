@@ -23,11 +23,6 @@ public abstract class Movimiento {
     return this.fecha.equals(fecha);
   }
 
-  public void agregateA(Cuenta cuenta) {
-    cuenta.setSaldo(calcularValor(cuenta));
-    cuenta.agregarMovimiento(fecha, monto, tipo);
-  }
-
   public double calcularValor(Cuenta cuenta) {
     if (tipo == TipoMovimiento.DEPOSITO) {
       return cuenta.getSaldo() + getMonto();
