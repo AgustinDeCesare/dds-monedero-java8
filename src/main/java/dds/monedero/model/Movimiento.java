@@ -23,10 +23,6 @@ public class Movimiento {
     return fecha;
   }
 
-  public boolean esDeLaFecha(LocalDate fecha) {
-    return this.fecha.equals(fecha);
-  }
-
   public TipoMovimiento getTipo() {
     return tipo;
   }
