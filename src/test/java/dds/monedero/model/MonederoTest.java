@@ -68,4 +68,20 @@ public class MonederoTest {
     assertThrows(MontoNegativoException.class, () -> cuenta.sacar(-500));
   }
 
+  @Test
+  public void Extraer() {
+    cuenta.setSaldo(5000);
+    cuenta.sacar(550);
+    assertEquals(cuenta.getSaldo(), 4450);
+  }
+
+  @Test
+  public void CuatroMovimientos() {
+    cuenta.poner(1500);
+    cuenta.poner(500);
+    cuenta.poner(350);
+    cuenta.sacar(900);
+    assertEquals(cuenta.getSaldo(),1450);
+    assertEquals(cuenta.getMovimientos().stream().count(), 4);
+  }
 }
