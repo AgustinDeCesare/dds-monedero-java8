@@ -4,3 +4,4 @@
 4. El setter setMovimientos de la cuenta no tiene sentido porque los movimientos se agregar de a 1 cuando se realizan
 5. Los atributos declarados en el metodo sacar son calculables y deben estar como metodos de la clase
 6. CORRECCION Deposito y Extraccion no deben ser clases ya que no tienen comportamiento propio, solo cambio el boolean esDeposito por un enum de tipo de movimiento
+7. El limite de 1000 deberia ser una variable que permita que en el futuro se pueda modificar sin cambiar el resto del codigo
