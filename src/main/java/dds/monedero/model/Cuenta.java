@@ -34,6 +34,7 @@ public class Cuenta {
 
     Movimiento deposito = new Movimiento(LocalDate.now(), cuanto, TipoMovimiento.DEPOSITO);
     agregarMovimiento(deposito);
+    this.saldo += cuanto;
   }
 
   public double montoRestanteDelDia(){
@@ -53,6 +54,7 @@ public class Cuenta {
     }
     Movimiento extraccion = new Movimiento(LocalDate.now(), cuanto, TipoMovimiento.EXTRACCION);
     agregarMovimiento(extraccion);
+    this.saldo -= cuanto;
   }
 
   public void agregarMovimiento(Movimiento movimiento) {
