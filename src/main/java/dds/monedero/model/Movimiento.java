@@ -18,17 +18,8 @@ public abstract class Movimiento {
     return fecha;
   }
 
-
   public boolean esDeLaFecha(LocalDate fecha) {
     return this.fecha.equals(fecha);
-  }
-
-  public double calcularValor(Cuenta cuenta) {
-    if (tipo == TipoMovimiento.DEPOSITO) {
-      return cuenta.getSaldo() + getMonto();
-    } else {
-      return cuenta.getSaldo() - getMonto();
-    }
   }
 
   public TipoMovimiento getTipo() {
